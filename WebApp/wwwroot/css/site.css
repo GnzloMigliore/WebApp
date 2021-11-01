@@ -48,7 +48,16 @@
 .color {
     color: white;
 }
-
+.formulario-registro {
+    width: 60%;
+}
+#registro {
+    width: 60%;
+}
+.form{
+    display:flex;
+    justify-content:center;
+}
 .titulo {
     font-family: 'Ceviche One', cursive;
     font-size: 6rem;

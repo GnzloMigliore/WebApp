@@ -5803,11 +5803,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gonzalo Migliore\\source\\repos\\WebApp\\WebApp\\WebApp.csproj",
+      "projectUniqueName": "C:\\Users\\Gonzalo Migliore\\Desktop\\WebApp\\WebApp\\WebApp.csproj",
       "projectName": "WebApp",
-      "projectPath": "C:\\Users\\Gonzalo Migliore\\source\\repos\\WebApp\\WebApp\\WebApp.csproj",
+      "projectPath": "C:\\Users\\Gonzalo Migliore\\Desktop\\WebApp\\WebApp\\WebApp.csproj",
       "packagesPath": "C:\\Users\\Gonzalo Migliore\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gonzalo Migliore\\source\\repos\\WebApp\\WebApp\\obj\\",
+      "outputPath": "C:\\Users\\Gonzalo Migliore\\Desktop\\WebApp\\WebApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Gonzalo Migliore\\AppData\\Roaming\\NuGet\\NuGet.Config",

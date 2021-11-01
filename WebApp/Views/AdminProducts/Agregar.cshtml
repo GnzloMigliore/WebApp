@@ -7,7 +7,7 @@
 <article class="col-8 mx-auto mb-5 mt-4">
     <h2 class="titulo-admin pb-3 border-bottom text-center pt-5 mt-5 mx-auto text-uppercase">AGREGAR PRODUCTO</h2>
 </article>
-<div class="container-fluid">
+<div class="container-fluid w-50">
     <form asp-action="Agregar">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
@@ -30,6 +30,7 @@
                 <option value="niños">niños</option>
             </select>
         </div>
+
         <div class="form-group">
             <label asp-for="price" class="control-label">Precio</label>
             <input asp-for="price" class="form-control" />

@@ -44,6 +44,54 @@ namespace WebApp.Migrations
 
                     b.ToTable("Productos");
                 });
+
+            modelBuilder.Entity("WebApp.Models.Talle", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ProductId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("talle")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Talles");
+                });
+
+            modelBuilder.Entity("WebApp.Models.User", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("first_name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("gender")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("last_name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("password")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("phone")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Usuarios");
+                });
 #pragma warning restore 612, 618
         }
     }
