@@ -10,6 +10,7 @@ namespace WebApp.Models
     {
         [Key]
         public int id { get; set; }
+        public int role { get; set; }
         [Required(ErrorMessage = "El campo debe ser obligatorio")]
         public string first_name { get; set; }
         [Required(ErrorMessage = "El campo debe ser obligatorio")]
@@ -17,7 +18,7 @@ namespace WebApp.Models
         [Required(ErrorMessage = "El campo debe ser obligatorio")]
         public string gender { get; set; }
         [Required(ErrorMessage = "El campo debe ser obligatorio")]
-        [EmailAddress(ErrorMessage = "El correo electronico no es una direccion valida")]
+        [EmailAddress(ErrorMessage = "El correo electronico no es una direccion valida")]   
         public string email { get; set; }
         [Required(ErrorMessage = "El campo debe ser obligatorio")]
         public int phone { get; set; }

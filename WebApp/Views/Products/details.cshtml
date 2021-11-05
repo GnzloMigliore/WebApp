@@ -12,7 +12,7 @@
 
     <div class="row">
         <div class="col d-flex justify-content-end">
-            <img class="w-50" src="/images/zapatillas/airvioletas.jpg" class="card-img-top" alt="...">
+            <img class="w-50 card-img-top" src=" @Html.DisplayFor(model => model.image)" alt="...">
         </div>
         <div class="col mt-5">
             <dl class="row mt-5">
@@ -41,13 +41,14 @@
                     @Html.DisplayFor(model => model.stock)
                 </dd>
             </dl>
+            <div>
+                <a class="btn btn-dark mt-3" asp-action="Edit" asp-route-id="@Model.id">Añadir al carrito</a> 
+                <a class="btn btn-dark mr-5 mt-3" asp-action="Index">Volver</a>
+            </div>
         </div>
 
     </div>
 
 
 </div>
-<div class="d-flex justify-content-end">
-    <a class="btn btn-dark" asp-action="Edit" asp-route-id="@Model.id">Editar</a> |
-    <a class="btn btn-dark mr-5" asp-action="Index">Volver</a>
-</div>
+

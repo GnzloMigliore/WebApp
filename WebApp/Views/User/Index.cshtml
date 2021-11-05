@@ -8,9 +8,9 @@
     <h2 class="titulo-admin pb-3 border-bottom text-center pt-5 mt-5 mx-auto text-uppercase">CREAR USUARIO</h2>
 </article>
 <div class="container-fluid w-50">
-    <form  asp-action="Agregar">
+    <form asp-action="Agregar">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
+        <input type="hidden" asp-for="role" value="1" class="form-control" />
         <div class="form-group">
             <label asp-for="first_name" class="control-label">Nombre</label>
             <input asp-for="first_name" class="form-control" />
@@ -55,6 +55,7 @@
         <div class="form-group">
             <input type="submit" value="Create" class="btn btn-dark" />
         </div>
+
     </form>
 
 

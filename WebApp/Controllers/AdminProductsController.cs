@@ -48,7 +48,7 @@ namespace WebApp.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Agregar([Bind("id,name,description,gender,price,stock")]Producto producto)
+        public async Task<IActionResult> Agregar([Bind("id,name,description,gender,price,stock,image")]Producto producto)
         {
              List<Talle> talles = context.Talles.ToList();
             if (ModelState.IsValid)
@@ -97,7 +97,7 @@ namespace WebApp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("id,name,description,gender,price,stock")] Producto producto)
+        public async Task<IActionResult> Edit(int id, [Bind("id,name,description,gender,price,stock, image")] Producto producto)
         {
             if (id != producto.id)
             {

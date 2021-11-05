@@ -10,47 +10,26 @@
 
 <section class="container d-flex justify-content-end">
     <div class="row align-items-start col-3 mb-4">
-        <div class="col dos-drops content-drop">
-            <div class="dropdown ">
-                <button class="btn btn-outline-dark rounded-0 dropdown-toggle boton-orden-filtro" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    orden
-                </button>
-                <div class="dropdown-menu dropdown-menu-right titulo-panel-filtros" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="/productos/novedades" id="novedades">Novedades</a>
-                    <a class="dropdown-item" href="#" id="mas-vendidos">Los más vendidos</a>
-                    <a class="dropdown-item" href="/productos/orden-menor-mayor" id="menor-mayor">Precio (menor a mayor)</a>
-                    <a class="dropdown-item" href="/productos/orden-mayor-menor" id="mayor-menor">Precio (mayor a menor)</a>
-                </div>
-            </div>
-        </div>
         <div class="col">
             <div class="dropdown">
-                <button class="btn btn-outline-dark rounded-0 dropdown-toggle boton-orden-filtro" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    + filtros
-                </button>
-                <div class="dropdown-menu dropdown-menu-right filtros-menu-drop" aria-labelledby="dropdownMenuButton">
-                    <div class="contenedores-panel-filtros">
-                        <a class="dropdown-item titulo-panel-filtros" href="#">talles</a>
-                        <div class="padre-box-talles">
-                            <a href="#"><div class="box-talles">38.5</div></a>
-                            <a href="#"><div class="box-talles">39</div></a>
-                            <a href="#"><div class="box-talles">39.5</div></a>
-                            <a href="#"><div class="box-talles">40</div></a>
-                            <a href="#"><div class="box-talles">40.5</div></a>
-                            <a href="#"><div class="box-talles">41</div></a>
-                            <a href="#"><div class="box-talles">41.5</div></a>
-                            <a href="#"><div class="box-talles">42</div></a>
-                            <a href="#"><div class="box-talles">42.5</div></a>
-                            <a href="#"><div class="box-talles">43</div></a>
-                            <a href="#"><div class="box-talles">43.5</div></a>
-                            <a href="#"><div class="box-talles">44</div></a>
-
+            
+                    <button class="btn btn-outline-dark rounded-0 dropdown-toggle boton-orden-filtro" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                       Filtrar por género
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right filtros-menu-drop" aria-labelledby="dropdownMenuButton">
+                        <div class="contenedores-panel-filtros">
+                            <div class="padre-box-talles">
+                                <a href="/Products/FiltroMasculino"><div class="box-talles">Masculino</div></a>
+                                <a href="/Products/FiltroFemenino"><div class="box-talles">Femenino</div></a>
+                                <a href="/Products/FiltroNiño"><div class="box-talles">Niño</div></a>
+                                <a href="/Products"><div class="box-talles">Ver todos</div></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    
+       
             </div>
         </div>
-
     </div>
    
 </section>
@@ -64,24 +43,29 @@
 
                         <div class="col  d-flex justify-content-center">
                             <div class="card" style="width: 18rem;">
-                                <img src="/images/zapatillas/airvioletas.jpg" class="card-img-top" alt="...">
+                                <img src="@Html.DisplayFor(modelItem => item.image)" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <h5 class="card-title"> @Html.DisplayFor(modelItem => item.name)</h5>
+                                    <div class="row">
+                                        <h5 class="card-title ml-3"> @Html.DisplayFor(modelItem => item.name)</h5>
+                                        <p class="card-text">
+                                            <h5 class="card-title ml-3">$ @Html.DisplayFor(modelItem => item.price)</h5>
+                                        </p>
+                                    </div>
+
                                     <p class="card-text">
                                         <h5 class="card-title"> @Html.DisplayFor(modelItem => item.description)</h5>
                                     </p>
-                                    <p class="card-text">
-                                        <h5 class="card-title"> @Html.DisplayFor(modelItem => item.gender)</h5>
-                                    </p>
-                                    <p class="card-text">
-                                        <h5 class="card-title"> @Html.DisplayFor(modelItem => item.stock)</h5>
-                                    </p>
-                                    <p class="card-text">
-                                        <h5 class="card-title"> @Html.DisplayFor(modelItem => item.price)</h5>
-                                    </p>
-                                    <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.id">Ver</a> 
+                                    <div class="row">
+                                        <p class="card-text">
+                                            <h5 class="card-title  ml-3"> @Html.DisplayFor(modelItem => item.gender)</h5>
+                                        </p>
+                                        <p class="card-text">
+                                            <h5 class="card-title  ml-3">Stock @Html.DisplayFor(modelItem => item.stock)</h5>
+                                        </p>
+                                    </div>
+                                        <a class="btn btn-dark" asp-action="Details" asp-route-id="@item.id">Ver</a>
+                                    </div>
                                 </div>
-                            </div>
                         </div>
                     }
                 </div>

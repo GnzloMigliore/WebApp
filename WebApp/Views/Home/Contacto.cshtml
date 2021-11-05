@@ -1,0 +1,39 @@
+﻿<article class="col-8 mx-auto mb-5 mt-4">
+    <h2 class="titulo-admin pb-3 border-bottom text-center pt-5 mt-5 mx-auto text-uppercase">CONTACTO</h2>
+</article>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <form asp-action="Contacto">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group text-left titulo3">
+                    <label class="control-label"><h2>Nombre</h2></label>
+                    <input class="form-control " />
+
+                </div>
+                <div class="form-group text-left titulo3">
+                    <label class="control-label"><h2>Apellido</h2></label>
+                    <input class="form-control " />
+
+                </div>
+                <div class="form-group text-left titulo3">
+                    <label class="control-label"><h2>Email</h2></label>
+                    <input class="form-control" />
+
+                </div>
+                <div class="form-group text-left titulo3">
+                    <label class="control-label"><h2>Numero de Telefono</h2></label>
+                    <input class="form-control " />
+
+                </div>
+                <div class="form-group text-left">
+                    <input type="submit" value="contacto" class="btn btn-dark" />
+                </div>
+            </form>
+        </div>
+        <div class="col-6 text-center">
+            <img class="banner2" src="/images/banner/contacto.gif">
+        </div>
+    </div>
+</div>

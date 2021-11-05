@@ -31,5 +31,36 @@ namespace WebApp.Controllers
 
             return View(producto);
         }
+
+        public IActionResult FiltroMasculino()
+        {
+
+            var productos =
+               from d in context.Productos
+               where d.gender == "hombre"
+               select d;
+
+            return View("index",productos);
+        }
+        public IActionResult FiltroFemenino()
+        {
+
+            var productos =
+               from d in context.Productos
+               where d.gender == "mujer"
+               select d;
+
+            return View("index", productos);
+        }
+        public IActionResult FiltroNiño()
+        {
+
+            var productos =
+               from d in context.Productos
+               where d.gender == "niños"
+               select d;
+
+            return View("index", productos);
+        }
     }
 }

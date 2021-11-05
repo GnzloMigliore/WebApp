@@ -15,6 +15,7 @@
 </head>
 <body>
     <header>
+        @if(ViewBag.EstaLogueado=="false"){
         <nav id="navbar" class="nav navbar navbar-expand-lg navbar-light">
             <div class="container-fluid mr-3">
                 <a href="/" class="logo1"> <img class="logo" src="/images/logo/logo.png"></a>
@@ -30,14 +31,12 @@
 
                 </div>
                 <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
+                   
                     <li class=" nav-item">
-                        <a href="/AdminProducts" class="nav-link" style="color:white;font-size:1.2rem;">Administrar productos</a>
-                    </li>
-                    <li class=" nav-item">
-                        <a class="nav-link" style="color:white;font-size:1.2rem;">Contacto</a>
+                        <a class="nav-link" href="/Home/Contacto" style="color:white;font-size:1.2rem;">Contacto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-4" href="#" style="color:white;font-size:1.2rem;">Nosotros</a>
+                        <a class="nav-link mr-4" href="/Home/Nosotros" style="color:white;font-size:1.2rem;">Nosotros</a>
                     </li>
                     <li class="nav-item">
                         <a href="/Products" class="nav-link mr-4" href="#" style="color:white;font-size:1.2rem;">Productos</a>
@@ -48,13 +47,64 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="/User">Crear cuenta</a></li>
-                            <li><a class="dropdown-item" href="#">Iniciar sesión</a></li>
+                            <li><a class="dropdown-item" href="/User/Login">Iniciar sesión</a></li>
 
                         </ul>
                     </li>
                 </ul>
             </div>
         </nav>
+        }else{
+
+        <nav id="navbar" class="nav navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid mr-3">
+                <a href="/" class="logo1"> <img class="logo" src="/images/logo/logo.png"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
+
+                    <form class="d-flex mt-3">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
+                    </form>
+
+                </div>
+                <ul class=" navbar-nav me-auto mb-2 mb-lg-0">
+                    @if (ViewBag.role == 9)
+                    {
+                        <li class=" nav-item">
+                            <a href="/AdminProducts" class="nav-link" style="color:white;font-size:1.2rem;">Administrar productos</a>
+                        </li>
+                    }
+                    @if (ViewBag.role != 9)
+                    {
+                        <li class=" nav-item">
+                            <a class="nav-link" href="/Home/Contacto" style="color:white;font-size:1.2rem;">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mr-4" href="/Home/Nosotros" style="color:white;font-size:1.2rem;">Nosotros</a>
+                        </li>
+                    }
+                        <li class="nav-item">
+                            <a href="/Products" class="nav-link mr-4" href="#" style="color:white;font-size:1.2rem;">Productos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class=" nav-link dropdown-toggle" style="color:white;font-size:1.2rem;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                @ViewBag.Usuario
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/User">Perfil</a></li>
+                                <li><a class="dropdown-item" href="/User/Logout">Cerrar sesión</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+            </div>
+        </nav>
+
+
+        }
     </header>
     <div class="w-100">
         <main role="main">

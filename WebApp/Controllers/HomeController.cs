@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -19,6 +21,30 @@ namespace WebApp.Controllers
         }
 
         public IActionResult Index()
+        {
+            ViewBag.EstaLogueado = "false";
+            try
+            {
+                var usuario = JsonConvert.DeserializeObject<User>(HttpContext.Session.GetString("UserSession"));
+                if (usuario != null)
+                {
+                    ViewBag.EstaLogueado = "true";
+                }
+                ViewBag.Role = usuario.role;
+                ViewBag.Usuario = usuario.first_name + " " + usuario.last_name;
+            }
+            catch
+            {
+
+            }
+       
+            return View();
+        }
+        public IActionResult Nosotros()
+        {
+            return View();
+        }
+        public IActionResult Contacto()
         {
             return View();
         }

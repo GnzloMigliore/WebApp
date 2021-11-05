@@ -41,7 +41,7 @@
         color: black;
     }
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1);
     transition: .5s .5s;
     transition-delay: 0s;
 }
@@ -63,9 +63,12 @@
     font-size: 6rem;
     color: black;
     position: absolute;
-    top: 15rem;
-    left: 28rem;
     text-align: center;
+    top: 38%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .titulo2 {
@@ -73,11 +76,16 @@
     font-size: 3rem;
     color: black;
     position: absolute;
-    top: 20rem;
-    left: 36rem;
+    top: 50%;
+    left: 0;
+    right: 0;
     text-align: center;
 }
 
+.titulo3 {
+    font-family: 'Ceviche One', cursive;
+    color: black;
+}
 .formulario {
     width: 40%;
 }

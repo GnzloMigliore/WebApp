@@ -41,16 +41,29 @@
             <input asp-for="stock" class="form-control" />
 
         </div>
+        <label asp-for="image" class="control-label">Imagen</label>
+        <select class="form-group form-control" asp-for="image">
+            <option disabled selected value="">Seleccione una imagen</option>
+            <option valu e="/images/zapatillas/airazul.jpg">Air Max Azules</option>
+            <option value="/images/zapatillas/airblancas.jpg">Air Max Blancas</option>
+            <option value="/images/zapatillas/airverdes.jpg">Air Max Verdes</option>
+            <option value="/images/zapatillas/airforcecelestes.jpg">Air Force Celestes</option>
+            <option value="/images/zapatillas/buzenitzcrema">Adidas Buzenitz Crema</option>
+            <option value="/images/zapatillas/superstarblanca.jpg">Superstar Blancas</option>
+            <option value="/images/zapatillas/superstarnegras.jpg">Superstar Negras</option>
+            <option value="/images/zapatillas/smithazul.jpg">Adidas Smith Azules</option>
+        </select>
         <div class="form-group">
             <input type="submit" value="Create" class="btn btn-dark" />
         </div>
     </form>
+    <div class="form-group">
+        <a class="btn btn-dark" asp-action="Index">Volver</a>
+    </div>
 </div>
 
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

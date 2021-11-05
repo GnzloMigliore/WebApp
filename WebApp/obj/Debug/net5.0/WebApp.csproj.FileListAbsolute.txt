@@ -154,3 +154,6 @@ C:\Users\Gonzalo Migliore\Desktop\WebApp\WebApp\obj\Debug\net5.0\WebApp.csproj.C
 C:\Users\Gonzalo Migliore\Desktop\WebApp\WebApp\obj\Debug\net5.0\WebApp.genruntimeconfig.cache
 C:\Users\Gonzalo Migliore\Desktop\WebApp\WebApp\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\Gonzalo Migliore\Desktop\WebApp\WebApp\obj\Debug\net5.0\Razor\Views\AdminProducts\Edit.cshtml.g.cs
+C:\Users\Gonzalo Migliore\Desktop\WebApp\WebApp\obj\Debug\net5.0\Razor\Views\User\Login.cshtml.g.cs
+C:\Users\Gonzalo Migliore\Desktop\WebApp\WebApp\obj\Debug\net5.0\Razor\Views\Home\Contacto.cshtml.g.cs
+C:\Users\Gonzalo Migliore\Desktop\WebApp\WebApp\obj\Debug\net5.0\Razor\Views\Home\Nosotros.cshtml.g.cs
